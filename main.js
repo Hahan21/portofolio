@@ -28,6 +28,7 @@ Vue.createApp({
           console.log(error);
         });
     },
+ 
   },
   beforeMount() {
     this.getHeaderData();
