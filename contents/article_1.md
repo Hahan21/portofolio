@@ -1,20 +1,29 @@
-# Terkena Virus Ransomware
+# Analisis Sentimen Tweet Mixue
 
 _Oleh Hahan Nur Rizky_
 
-Hello World!! Sedikit bercerita mengenai pengalaman saya kemarin habis terkena serangan hacker dari internet setelah mencoba meng install software bajakan dari website tidak dikenal, hal ini merupakan pengalaman pertama saya mendapati virus dari internet. Saya sebenar nya sudah sering menggunakan software bajakan mulai dari microsoft office, bandicampro hingga filmora pro bisa saya dapatkan dengan mudah, entah mengapa saat saya mencoba lagi untuk menggunakan software bajakan saya malah terkena virus ini.
-Ransomware adalah sejenis malware yang intinya mampu mengambil alih kendali atas sebuah komputer dan mencegah penggunanya untuk mengakses data hingga tebusan dibayar, salah satu contoh text yang berhasil saya screenshot saat terkena virus tersebut seperti ini
+Nama : Hahan Nur Rizky Nim : 2000016038
+Responsi Crawling data pada twitter
 
-Intinya dia atau si hacker ini meminta saya untuk menebus dengan sejumlah uang dalam satuan dollar untuk dapat membuka file-file saya yang telah ia enkripsi atau dia kunci, ia meminta untuk menghubungunya melalui email yang telah ia cantumkan di file .TXT seperti gambar tersebut
+Mengambil data dari twitter menggunakan menggunakan snscrape lalu membuat function untuk memanggil data twiter
 
-Awal nya saya tidak merasa khawatir dengan hal seperti ini, dalam pikiran saya pasti telah banyak totorial atau cara membuka file virus ini di youtube, namun apa yang saya pikirkan kan ternyata salah dan tidak sesuai ekspektasi saya, disinilah saya mulai panik dan mencoba menghubungi teman satu jurusan saya di program studi sistem informasi, lucunya saya yang mahasiswa IT saja bisa terkena hal seperti ini dan tidak dapat cara mengatasi nya , ini merupakan kelalaian saya sendiri dan tidak berhati-hati dalam internet, setelah menanya teman yang juga mahasiswa IT dia pun tidak dapat mengasih solusi dan bertanya-tanya kepada saya mengapa hal tersebut dapat terjadi.
+Function yang dibuat yaitu untuk menggambil username dan content tweet dari library snscrape lalu membuat data frame nya menggunakan pandas
 
-Apa yang membuat saya tidak dapat membuka nya dan mulai putus asa ?. Virus ini saya dapatkan secara online saat menginstal software bajakan tersebut saya masih terhubung dalam jaringan wifi , alhasil orang yang telah memasukan virus itu dapat mengakses semua file-file saya secara online, inilah mengapa dari beberapa tutorial yang telah saya tonton berkata bahwasanya untuk yang terkena virus ini dalam keadaan online sampai saat ini masih sangat sulit untuk membuka enkripsi nya, saya juga mencoba menonton pengalaman seorang youtuber yang juga terkena virus yang hampir sama dan dia pun tidak dapat menggembalikan file-file nya yang telah di enkripsi oleh hacker tersebut. Susah nya lagi untul virus ini format nya berbeda-beda yang saya dapat filenya dengan format .Gujd sedang di banyak tutorial berbeda-beda format lagi ada yang .Ufwj , .Zzla, .Wwka, .Zqqw, .Ddsg Dan masih banyak lagi pastinya sebagai contoh saya telah menscreenshot file-file saya yang telah berubah format jadi .Gujd semuanya .
+lalu pada gambar diatas saya merubah data format dataframe tadi menjadi string agar dapat di tokenize dan di stemming, karna sebelum nya terdapat eror karna datatype ‘object’
 
-Dapat dilihat semua file saya berubah format dan tidak dapat dibuka sama sekali, saya telah mencoba berbagai macam cara untuk dapat membuka nya sampai ikut forum diskusi di facebook juga, namun kebanyakan berkata bahwa hal tersebut sangat susah, mungkin untuk dapat membukanya butuh bantuan dari seorang hacker juga yang mampu menemuka kunci enkripsi dari semua file yang telah berubah format tersebut.
+dengan menggunakan library NLTK disini saya mencoba untuk mentokenize kan data yang sebelumnya terdapat dari dataframe yang telah dirubah menjadi string
 
-Walaupun saya tidak bisa menggembalikan semua file dan saya juga tidak mampu membayar hacker yang telah mengunci file-file di laptop saya, kabar baik nya saya sudah pernah membackup file penting saya ke dalam google drive dari sertifikat online saya , biodata sampai foto-foto yang saya simpan , dan juga saya mencoba menrecovery file-file yang masih dapat saya dapatkan lagi , yaitu dengan bantuan software shadowexplore , software ini dapat mengembalikan beberapa file kita di local disk C: sebagai contoh saya ambil screenshot an file-file yang berhasil saya kembalikan berikut.
+setelah ditokenization pada gambar diatas saya menstemming menggunakan library sastrawi
 
-Kebanyakan file nya dalam bentuk foto dan hitung-hitung tak apalah karna di laptop saya juga data-data masih sedikit , kebanyakan yang hilang adalah file-file tugas saya yang telah saya kumpulkan dari semester 1 dan saya taruh di file disk D: jadinya software shadowexplore yang saya gunakan tidak dapat mengembalikan nya, tapi untung saja matakuliah saya banyak yang menggunakan google classroom yaitu sebuah aplikasi pembelajaran yang sedang ramai digunakan saat ini karna sedang belajar dirumah dikarenakan pandemi, jadi saya dapat mengambil lagi file-file tugas yang telah pernah saya submit di google class melalui google drive di akun google saya , jadi saya merasa membackup data-data kita ke google drive atau software cloud lain nya sangat penting untuk dapat menggembalikan file yang hillang suatu saat.
+setelah stemming, saya melakukan stop word removal dengan sama menggunakan library
+NLTK dan memfilter tokens
 
-Kesimpulan dari pengalaman saya ini ialah berhati-hati lah dalam menggunakan internet dan saat mencoba dan menggunakan aplikasi bajakan, karna file-file atau data-data kita saat ini sangat lah berharga dan penting , hal yang menimpa saya tidak banyak ber impact pada pekerjaan saya karna dilaptop saya juga data nya masih sedikit , coba kita bayangkan apabila sebuat instasi atau company yang terkena virus ini dan kehilangan semua data-data nya sangatlah berakibat fatal dan bisa saja membuat nya menjadi bangkrut karna hal tersebut, semoga dengan adanya tulisan ini dapat sama-sama membuat kita menjadi lebih waspada dan senantiasa berhati-hati agar tidak terkena kejahatan di internet. Terima Kasih
+’membuat function sentimental disini saya menaruh kata-kata positif seperti enak,terbaik,suka,keren,HAHAN,ganteng,manis,banyak,like untuk mendapatkan sentimen dari tweeet yang dibuat lalu memasukan kata-kata negatif nya seperti benci gaenak dll. function diatas saya dapatkan pada modul prak 10 textprocessing
+
+membuat chart analisis nya menggunakan matplotlib yaitu dengan memasukan function res untuk mengklasifikasikan text dari data crawling yang sebelumnya dataframe menjadi string disini saya menginport library matplotlib
+
+codingan diatas juga didaptkan dari modul prak 10 yaitu textprocessing
+
+kesimpulan yang didapat dalam analisis sentimen tweet mengenai mixue yaitu mengarah ke netral karna pengembangan data yang saya pilih untuk memfilter kata positif dan negatif terlalu sedikit dan berbanding terbalik dengan 100 data yang telah saya ambil.
+Sekian
+Terima kasih

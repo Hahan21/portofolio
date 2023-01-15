@@ -93,7 +93,7 @@
                 >
                 <a
                   v-bind:href="header.social == undefined ? '':header.social.yt.url"
-                  ><i class="bi-youtube"></i> {{header.social == undefined ?
+                  ><i class="bi-linkedin"></i> {{header.social == undefined ?
                   '':header.social.yt.title}}</a
                 >
               </div>
@@ -108,7 +108,7 @@
       <!--Articles-->
       <div class="container pt-4">
         <div class="row">
-          <div class="col-md-3" v-for="item in articles">
+          <div class="col-md-4" v-for="item in articles">
             <div class="card">
               <img
                 class="card-img-top"
@@ -127,7 +127,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3" v-for="item in articles">
+          <div class="col-md-4" v-for="item in articles">
             <div class="card">
               <img
                 class="card-img-top"
@@ -147,7 +147,7 @@
             </div>
           </div>
       
-          <div class="col-md-3" v-for="item in articles">
+          <div class="col-md-4" v-for="item in articles">
             <div class="card">
               <img
                 class="card-img-top"
