@@ -146,25 +146,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3" v-for="item in articles">
-            <div class="card">
-              <img
-                class="card-img-top"
-                v-bind:src="item.thumbnail"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title">{{item.title}}</h5>
-                <p class="card-text">{{item.description}}</p>
-                <a
-                  :href="'/read.html?article='+item.content"
-                  class="btn btn-primary"
-                  role="button"
-                  >Read</a
-                >
-              </div>
-            </div>
-          </div>
+      
           <div class="col-md-3" v-for="item in articles">
             <div class="card">
               <img
